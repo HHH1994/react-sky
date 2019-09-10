@@ -4,7 +4,16 @@
   "description": "这是一个从0开始搭建的react组件库，包含了组件，组件测试，组件demo以及说明文档。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clear": "rimraf dist/components",
+    
+    "demoDev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config ./examples/webpack.demo.js  --mode development",
+    "demoBuild": "npm run clear && cross-env NODE_ENV=production webpack --config ./examples/webpack.demo.js --mode production",
+
+
+    "docsDev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config ./docs/webpack.docs.js  --mode development",
+    "docsBuild": "npm run clear && cross-env NODE_ENV=production webpack --config ./docs/webpack.docs.js --mode production",
+    
+    "lib": "babel ./components --out-dir ./dist"
   },
   "repository": {
     "type": "git",
@@ -20,6 +29,23 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "stylus": "^0.54.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.1",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
   }
 }
