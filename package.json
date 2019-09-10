@@ -1,0 +1,25 @@
+{
+  "name": "knight-errant",
+  "version": "1.0.0",
+  "description": "这是一个从0开始搭建的react组件库，包含了组件，组件测试，组件demo以及说明文档。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvpangpang/Knight-Errant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvpangpang/Knight-Errant/issues"
+  },
+  "homepage": "https://github.com/lvpangpang/Knight-Errant#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
+  }
+}
