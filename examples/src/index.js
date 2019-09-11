@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ButtonDemo from './button';
+import router from './router';
 
 function App() {
   return (
     <div>
-      <ButtonDemo></ButtonDemo>
+      {router}
     </div>
   );
 }

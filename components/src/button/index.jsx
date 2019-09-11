@@ -1,5 +1,5 @@
 import React from 'react';
-// import './index.styl';
+import './index.styl';
 
 function Button(props) {
   return (

@@ -8,10 +8,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['env', 'react']
-        }
+        exclude: /node_modules/
       },
       // 解析styl
       {
@@ -19,12 +16,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'stylus-loader'
-          }
+          'stylus-loader'
         ]
       },
       // 解析图片
