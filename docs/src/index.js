@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
-function App(props) {
-  return (
-    <div>这是文档</div>
-  );
-}
+var MarkdownIt = require('markdown-it');
+window.md = new MarkdownIt({ html: true });
 
 ReactDOM.render(<App />, document.getElementById('app'));

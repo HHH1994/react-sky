@@ -1,6 +1,10 @@
+var path = require('path');
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.styl']
+    extensions: ['.js', '.jsx', '.styl'],
+    alias: {
+      '@': path.join(__dirname, './')
+    }
   },
   module: {
     rules: [
