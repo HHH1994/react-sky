@@ -8,6 +8,13 @@ module.exports = {
   },
   module: {
     rules: [
+
+      // 解析ts
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader'
+      },
+
       // 解析jsx和js
       {
         test: /\.jsx?$/,

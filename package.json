@@ -29,9 +29,12 @@
     "react-dom": "^16.9.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "stylus": "^0.54.7"
+    "stylus": "^0.54.7",
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
