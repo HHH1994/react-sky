@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import * as React from 'react';
 import { HashRouter, Route,  Switch } from 'react-router-dom';
 
 const Button = React.lazy(() => import('./pages/button/index'));
@@ -8,10 +8,10 @@ const Button1 = React.lazy(() => import('./pages/button1/index'));
 const RouteConfig = (
   <HashRouter>
     <Switch>
-      <Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense fallback={<div>Loading...</div>}>
         <Route exact path='/' component={Button} />
         <Route exact path='/button' component={Button1} />
-      </Suspense>
+      </React.Suspense>
     </Switch>
   </HashRouter>
 );

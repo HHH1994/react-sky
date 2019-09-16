@@ -1,11 +1,10 @@
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var merge = require('webpack-merge');
 var baseConfig = require('../webpack.base.js');
 
 module.exports = merge(baseConfig, {
   entry: [
-    './components/src/button'
+    './components/src/button/index.tsx'
   ],
   output: {
     path: path.resolve(__dirname, './dist'),

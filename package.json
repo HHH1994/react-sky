@@ -9,7 +9,7 @@
     "demoBuild": "npm run clear && cross-env NODE_ENV=production webpack --config ./examples/webpack.demo.js --mode production",
     "docsDev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config ./docs/webpack.docs.js  --mode development",
     "docsBuild": "npm run clear && cross-env NODE_ENV=production webpack --config ./docs/webpack.docs.js --mode production",
-    "componentsDev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config ./components/webpack.dcomponents.js  --mode development",
+    "componentsDev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config ./components/webpack.components.js  --mode development",
     "componentsBuild": "cross-env NODE_ENV=production webpack --config ./components/webpack.components.js --mode production",
     "lib": "babel ./components/src --out-dir ./dist"
   },
