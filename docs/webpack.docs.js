@@ -4,7 +4,7 @@ var merge = require('webpack-merge');
 var baseConfig = require('../webpack.base.js');
 
 module.exports = merge(baseConfig, {
-  entry: './docs/src/index.js',
+  entry: './docs/src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/',

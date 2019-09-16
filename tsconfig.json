@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./build/",
+    "outDir": "./**/dist/",
     "module": "commonjs",
     "allowJs": true,
     "baseUrl": "src",
@@ -8,8 +8,8 @@
     "jsx": "react"
   },
   "include": [
-    ".//**/*.ts",
-    "./src/**/*.tsx"
+    "./**/src/*.ts",
+    "./**/src/*.tsx"
   ],
   "exclude": [
     "node_modules",

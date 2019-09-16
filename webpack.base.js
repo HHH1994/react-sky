@@ -1,18 +1,21 @@
 var path = require('path');
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.styl'],
+    extensions: ['.js', '.jsx', '.styl', '.ts', '.tsx'],
     alias: {
       '@': path.join(__dirname, './')
     }
   },
+
+  devtool: 'source-map',
+
   module: {
     rules: [
 
       // 解析ts
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        use: ['ts-loader']
       },
 
       // 解析jsx和js
@@ -21,6 +24,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
+
       // 解析styl
       {
         test: /\.styl$/,

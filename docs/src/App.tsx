@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import PageList from './pageList';
-import Content from './content.jsx';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import Content from './content';
+import { HashRouter } from 'react-router-dom';
 
 import './index.styl';
-import router from './router.js';
+import router from './router';
 
 function App (props) {
   return (

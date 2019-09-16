@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function PageList(props) {
 
@@ -7,7 +7,7 @@ function PageList(props) {
       {
         props.children
       }
-    </React.Fragment>    
+    </React.Fragment>
   );
 }
 

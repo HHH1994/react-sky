@@ -1,5 +1,5 @@
-import React from 'react';
-import mdText from '@/components/src/button/Readme.md';
+import * as React from 'react';
+// import mdText from '@/components/src/button/Readme.md';
 
 function Button(props) {
   return (
