@@ -3,14 +3,14 @@ import './index.styl';
 
 interface Props {
 
-  // 主题
+  // 主题 默认为primary
   theme?: 'primary' | 'success' | 'error' | 'warning',
 
   // 按钮是否被🚫
   disabled?: boolean,
   
   // 内容
-  children: any,
+  children?: any,
 
   // 点击回调的事件
   click?: React.EventHandler<React.MouseEvent>

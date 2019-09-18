@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { mount, configure } from 'enzyme';
 import renderer from 'react-test-renderer';
 import * as Adapter from 'enzyme-adapter-react-16';
