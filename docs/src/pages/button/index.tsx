@@ -1,13 +1,18 @@
 import * as React from 'react';
-// import mdText from '@/components/src/button/Readme.md';
+// import mdText from './Readme';
+
+// console.log(mdText);
 
 function Button(props) {
   return (
     <div className='content-box'>
-      说明文档
-      {/* {window.md.render('32131321')} */}
+
       <div className='iframe-box'>
-        <iframe className='iframe-item' src={`http://127.0.0.1:8082/#${props.location.pathname}`}></iframe>
+        <iframe className='iframe-item' src={`http://127.0.0.1:8083/#${props.location.pathname}`}></iframe>
+      </div>
+
+      <div className='markdown-box'>
+        <iframe src='http://127.0.0.1:8082/components/src/button/Readme.md'></iframe>
       </div>
     </div>
   );

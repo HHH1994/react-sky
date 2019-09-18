@@ -7,8 +7,14 @@ import Button from '../components/src/button/index';
 configure({ adapter: new Adapter() });
 
 describe('try to test Button', () => {
-  let wrapper = mount(<Button theme='primary'></Button>);
-  it('should have rendered widget', () => {
-    expect(wrapper.hasClass('pp-button')).toEqual(true);
+  let wrapper;
+
+  beforeAll(() => {
+    wrapper = mount(<Button disabled theme='primary' click={() => { return 1;}}>吕肥肥</Button>);
+  });
+
+  it('should have pp-button', () => {
+    expect(wrapper.find('.pp-disabled')).toEqual(false);
+    expect(wrapper.find('.pp-disabled').hasClass('pp-disabled')).toEqual(true);
   });
 });

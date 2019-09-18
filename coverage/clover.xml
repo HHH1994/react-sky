@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1568792960437" clover="3.2.0">
-  <project timestamp="1568792960437" name="All files">
-    <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1" elements="13" coveredelements="9" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+<coverage generated="1568797018350" clover="3.2.0">
+  <project timestamp="1568797018350" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="2" methods="2" coveredmethods="1" elements="13" coveredelements="8" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
     <file name="index.tsx" path="/Users/daofeng/吕肥肥的github/react-sky/components/src/button/index.tsx">
-      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="21" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="21" count="1" type="cond" truecount="0" falsecount="2"/>
       <line num="23" count="1" type="stmt"/>
       <line num="32" count="1" type="stmt"/>
     </file>

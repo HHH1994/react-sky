@@ -7,7 +7,7 @@ const RouteConfig = (
   <HashRouter>
     <Switch>
       <React.Suspense fallback={<div>Loading...</div>}>
-        <Route exact path='/' component={Button} />
+        <Route exact path='/button' component={Button} />
       </React.Suspense>
     </Switch>
   </HashRouter>
