@@ -4,10 +4,10 @@ import './index.styl';
 interface Props {
 
   // 主题
-  theme: 'primary' | 'success' | 'error' | 'warning',
+  theme?: 'primary' | 'success' | 'error' | 'warning',
 
   // 按钮是否被🚫
-  disabled: boolean,
+  disabled?: boolean,
   
   // 内容
   children: any,

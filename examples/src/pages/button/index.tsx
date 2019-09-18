@@ -6,9 +6,9 @@ function ButtonDemo(props) {
     <div className='pp-demo-box'>
 
       <div className='button-demos-box' style={{width: '90%', margin: '0 auto', 'padding': '20px' }}> 
-        <Button text='primary' disabled click={() => alert('disabled')}>disabled</Button>
+        <Button disabled click={() => alert('disabled')}>disabled</Button>
         <br />
-        <Button text='primary'>primary</Button>
+        <Button>primary</Button>
         <br />
         <Button theme='success' click={() => { alert('success') }}>{<div>success</div>}</Button>
         <br />
