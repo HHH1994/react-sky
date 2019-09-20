@@ -4,7 +4,7 @@ var merge = require('webpack-merge');
 var baseConfig = require('../webpack.base.js');
 
 module.exports = merge(baseConfig, {
-  entry: './examples/src/index.tsx',
+  entry: './demos/src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/',
@@ -20,11 +20,11 @@ module.exports = merge(baseConfig, {
     hot: true,
     host: '0.0.0.0',
     disableHostCheck: true,
-    contentBase: path.join(__dirname, './examples/dist')
+    contentBase: path.join(__dirname, './demos/dist')
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './examples/template/index.html',
+      template: './demos/template/index.html',
       inject: true,
       hash: true,
       cache: true
