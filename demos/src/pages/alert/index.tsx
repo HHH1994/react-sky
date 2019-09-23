@@ -1,30 +1,33 @@
 import * as React from 'react';
-import { Alert }  from '@/components/src/index.tsx';
-
-console.log(Alert);
+import { useState } from 'react';
+import { Button, Alert }  from '@/components/src/index.tsx';
 
 function AlertDemo(props) {
+  const [show, setShow] = useState(false);
 
   return (
     <div className='pp-demo-box'>
 
       <div className='button-demos-box' style={{ width: '90%', margin: '0 auto', 'padding': '20px' }}>
+
+        <Button click={() => setShow(!show)}>alert测试</Button>
         
         <Alert
+          show={show}
           title='提示'
           info='吕肥肥，你该吃饭了'
           btnList={
             [
               {
-                name: '确定',
+                name: '点赞',
                 event: () => {
-                  alert(123);
+                  console.log('吕肥肥');
                 }
               },
               {
-                name: '取消',
+                name: '取消点赞',
                 event: () => {
-                  alert(456);
+                  console.log('王大熊');
                 }
               }
             ]
