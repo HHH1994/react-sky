@@ -1,21 +1,40 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button, Alert }  from '@/components/src/index.tsx';
 
 function AlertDemo(props) {
   const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
+
+  const alertRef = useRef(null);
 
   return (
     <div className='pp-demo-box'>
 
       <div className='button-demos-box' style={{ width: '90%', margin: '0 auto', 'padding': '20px' }}>
 
-        <Button click={() => setShow(!show)}>alert测试</Button>
-        
+        <Button click={() => setShow1(!show1)}>最简单的</Button>
+
+        <br />
+
+        <Button click={() => setShow(!show)}>带回调函数的</Button>
+
+        <br />
+
+        <Button>全局使用</Button>
+
+        <Alert
+          show={show1}
+          title='提示'
+          info='王大熊，你该吃饭了'
+          setShow={setShow1}
+        ></Alert>
+
         <Alert
           show={show}
           title='提示'
           info='吕肥肥，你该吃饭了'
+          setShow={setShow}
           btnList={
             [
               {
@@ -33,8 +52,9 @@ function AlertDemo(props) {
             ]
           }
         ></Alert>
-      </div>
 
+        <Alert ref={alertRef}></Alert>
+      </div>
     </div>
   );
 }

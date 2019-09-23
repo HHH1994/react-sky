@@ -4,7 +4,10 @@ import './index.styl';
 interface Props {
 
   // 是否显示（默认为否）
-  show: boolean,
+  show?: boolean,
+
+  // 关闭组件
+  setShow?: Function,
   
   // 标题
   title?: string, 
@@ -23,26 +26,20 @@ interface Props {
 
 function Alert(props: Props) {
 
-  const { show, title, info, btnList } = props;
-
-  const [showPop, setShowPop] = React.useState(false);
-
-  React.useEffect(() => {
-    setShowPop(show);
-  }, [show]);
+  const { show, setShow, title, info, btnList } = props;
 
   // 默认的按钮组数
   let defaultBtnList = [
     {
       name: '确定',
       event: () => {
-        setShowPop(false);
+        
       }
     }
   ];
 
   const hideEvent = (event?: Function) => {
-    setShowPop(false);
+    setShow(false);
     if (event) {
       event();
     }
@@ -52,10 +49,10 @@ function Alert(props: Props) {
     defaultBtnList = btnList;
   }
 
-  if (!showPop) return null;
+  if (!show) return null;
 
   return (
-    <div className='pp-alert' ref='ppAlert'>
+    <div className='pp-alert'>
       <div className='content-box'>
         <div className='title'>{title}</div>
         <div className='info'>{info}</div>
