@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@/components/src/button/index.tsx';
+import { Button } from '@/components/src/index.tsx';
 
 function ButtonDemo(props) { 
   return (

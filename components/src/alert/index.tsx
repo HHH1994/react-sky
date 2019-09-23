@@ -1,7 +1,11 @@
 import * as React from 'react';
+import { useState } from 'react';
 import './index.styl';
 
 interface Props {
+
+  // 是否显示（默认为否）
+  show: boolean,
   
   // 标题
   title?: string, 
@@ -16,18 +20,27 @@ interface Props {
 
 function Alert(props: Props) {
 
-  const { title, info, btnList } = props;
+  const { show, title, info, btnList } = props;
+
+  const [showPop, setShowPop] = useState(false);
+
+  const hideEvent = (event) => {
+    if (event) {
+      event();
+    }
+    (false);
+  };
 
   return(
     <div className='pp-alert'>
       <div className='content-box'>
         <div className='title'>{title}</div>
         <div className='info'>{info}</div>
-        <div className={btnList && btnList.length > 1 ? 'btn-box pp-one-line buttonNum-2' : 'btn-box pp-one-line'}>
+        <div className={btnList && btnList.length > 1 ? 'btn-box pp-one-top-line buttonNum-2' : 'btn-box pp-one-top-line'}>
           {
-            btnList && btnList.map((item, index) => {
+            btnList && btnList.slice(0, 2).map((item, index) => {
               return (
-                <div className='btn-item' onClick={item.event}>{item.name}</div>
+                <div className={index === 0 ? 'btn-item' : 'btn-item pp-one-left-line'} onClick={item.event}>{item.name}</div>
               );
             })
           }

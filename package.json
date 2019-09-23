@@ -1,7 +1,7 @@
 {
   "name": "knight-errant",
   "version": "1.0.0",
-  "description": "这是一个从0开始搭建的react组件库，包含了组件，组件测试，组件demo以及说明文档。",
+  "description": "这是一个从0开始搭建的react组件库。包含了组件，组件demo，组件文档以及组件测试。",
   "main": "index.js",
   "scripts": {
     "clear": "rimraf dist/components",
@@ -11,6 +11,7 @@
     "docsBuild": "npm run clear && cross-env NODE_ENV=production webpack --config ./docs/webpack.docs.js --mode production",
     "componentsDev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config ./components/webpack.components.js  --mode development",
     "componentsBuild": "cross-env NODE_ENV=production webpack --config ./components/webpack.components.js --mode production",
+    "dev": "concurrently \"npm run demoDev\" \"npm run docsDev\" \"npm run componentsDev\" ",
     "lib": "babel ./components/src --out-dir ./dist",
     "test": "jest --colors --coverage"
   },
@@ -46,6 +47,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-typescript": "^7.0.0-alpha.19",
+    "concurrently": "^4.1.2",
     "cross-env": "^5.2.1",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
