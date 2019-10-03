@@ -4,7 +4,7 @@ import './index.styl';
 interface Props {
 
   // 主题 默认为primary
-  theme?: 'primary' | 'success' | 'error' | 'warning',
+  type?: 'primary' | 'success' | 'error' | 'warning',
 
   // 按钮是否被🚫
   disabled?: boolean,
@@ -18,11 +18,11 @@ interface Props {
 
 function Button(props: Props) {
   
-  const { theme='primary', disabled=false, children } = props;
+  const { type='primary', disabled=false, children } = props;
 
   return (
     <div className='pp-button' onClick={ !disabled ? props.click : function() {}}>
-      <div className={`pp-${disabled ? 'disabled' : theme}`}>
+      <div className={`pp-${disabled ? 'disabled' : type}`}>
         {children}
       </div>
     </div>

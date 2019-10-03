@@ -6,7 +6,11 @@ function AlertDemo(props) {
   const [show, setShow] = useState(false);
   const [show1, setShow1] = useState(false);
 
-  const alertRef = useRef(null);
+  const alertRef = React.createRef();
+
+  React.useEffect(() => {
+    console.log(alertRef);
+  });
 
   return (
     <div className='pp-demo-box'>
@@ -17,11 +21,11 @@ function AlertDemo(props) {
 
         <br />
 
-        <Button click={() => setShow(!show)}>带回调函数的</Button>
+        <Button type='warning' click={() => setShow(!show)}>带回调函数的</Button>
 
         <br />
 
-        <Button>全局使用</Button>
+        <Button type='success' click={}>全局使用</Button>
 
         <Alert
           show={show1}

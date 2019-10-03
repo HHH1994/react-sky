@@ -10,11 +10,11 @@ function ButtonDemo(props) {
         <br />
         <Button>primary</Button>
         <br />
-        <Button theme='success' click={() => { alert('success') }}>{<div>success</div>}</Button>
+        <Button type='success' click={() => { alert('success') }}>{<div>success</div>}</Button>
         <br />
-        <Button theme='warning' click={() => { alert('warning') }}>warning</Button>
+        <Button type='warning' click={() => { alert('warning') }}>warning</Button>
         <br />
-        <Button theme='error' click={() => { alert('error') }}>
+        <Button type='error' click={() => { alert('error') }}>
           <div>这是嵌套的error</div>
         </Button>
       </div>
