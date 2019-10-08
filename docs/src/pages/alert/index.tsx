@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function Button(props) {
+function Alert(props) {
   return (
     <div className='content-box'>
 
@@ -9,10 +9,10 @@ function Button(props) {
       </div>
 
       <div className='markdown-box'>
-        <iframe src='http://127.0.0.1:8081/components/src/button/Readme.md'></iframe>
+        <iframe src='http://127.0.0.1:8081/components/src/alert/Readme.md'></iframe>
       </div>
     </div>
   );
 }
 
-export default Button;
+export default Alert;

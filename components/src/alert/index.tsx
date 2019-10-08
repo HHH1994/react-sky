@@ -19,7 +19,7 @@ interface Props {
   btnList?: [
     {
       name: string,
-      event: () => void;
+      event: () => void; 
     }
   ]
 }

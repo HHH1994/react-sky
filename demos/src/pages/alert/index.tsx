@@ -25,7 +25,7 @@ function AlertDemo(props) {
 
         <br />
 
-        <Button type='success' click={}>全局使用</Button>
+        {/* <Button type='success' click={}>全局使用</Button> */}
 
         <Alert
           show={show1}
@@ -57,7 +57,7 @@ function AlertDemo(props) {
           }
         ></Alert>
 
-        <Alert ref={alertRef}></Alert>
+        {/* <Alert ref={alertRef}></Alert> */}
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ export default {
     'touch-feedback'
   ],
   '表单类': [
-    'button'
+    'button',
+    'alert'
   ]
 }
