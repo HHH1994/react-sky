@@ -7,7 +7,7 @@ module.exports = merge(baseConfig, {
   entry: './docs/src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
+    publicPath: './',
     filename: '[name].js',
     chunkFilename: 'chunks/[name][hash].js'
   },
