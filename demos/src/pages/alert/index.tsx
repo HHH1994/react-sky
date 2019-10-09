@@ -39,22 +39,22 @@ function AlertDemo(props) {
           title='提示'
           info='吕肥肥，你该吃饭了'
           setShow={setShow}
-          btnList={
-            [
-              {
-                name: '点赞',
-                event: () => {
-                  console.log('吕肥肥');
-                }
-              },
-              {
-                name: '取消点赞',
-                event: () => {
-                  console.log('王大熊');
-                }
-              }
-            ]
-          }
+          // btnList={
+          //   [
+          //     {
+          //       name: '点赞',
+          //       event: () => {
+          //         console.log('吕肥肥');
+          //       }
+          //     },
+          //     {
+          //       name: '取消点赞',
+          //       event: () => {
+          //         console.log('王大熊');
+          //       }
+          //     }
+          //   ]
+          // }
         ></Alert>
 
         {/* <Alert ref={alertRef}></Alert> */}
