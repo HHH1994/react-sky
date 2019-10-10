@@ -3,13 +3,23 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var merge = require('webpack-merge');
 var baseConfig = require('../webpack.base.js');
 
+var url = '/';
+// 线上走cdn
+if (process.env.NODE_ENV === 'production') {
+  url = './';
+}
 module.exports = merge(baseConfig, {
   entry: './docs/src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: './',
+    publicPath: url,
     filename: '[name].js',
     chunkFilename: 'chunks/[name][hash].js'
+  },
+  resolve: {
+    alias: {
+      '@': path.join(__dirname, '../')
+    }
   },
   devServer: {
     hot: true,
