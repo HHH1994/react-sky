@@ -5,7 +5,7 @@ function Icon(props) {
     <div className='content-box'>
 
       <div className='iframe-box'>
-        <iframe className='iframe-item' src={`../../demos/dist/index.html#${alert}`}></iframe>
+        <iframe className='iframe-item' src={`${window.server}${props.location.pathname}`}></iframe>
 
       </div>
 

@@ -5,7 +5,7 @@ function Alert(props) {
     <div className='content-box'>
 
       <div className='iframe-box'>
-        <iframe className='iframe-item' src={`http://127.0.0.1:8083/#${props.location.pathname}`}></iframe>
+        <iframe className='iframe-item' src={`${window.server}${props.location.pathname}`}></iframe>        
       </div>
 
       <div className='markdown-box'>
