@@ -5,7 +5,7 @@ function Button(props) {
     <div className='content-box'>
 
       <div className='iframe-box'>
-        <iframe className='iframe-item' src={`${window.server}${props.location.pathname}`}></iframe>       
+        <iframe className='iframe-item' src={`https://lvpangpang.github.io/react-sky/demos/dist/index.html#${props.location.pathname}`}></iframe>       
       </div>
 
       <div className='markdown-box'>
