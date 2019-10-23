@@ -25,6 +25,7 @@ module.exports = merge(baseConfig, {
     hot: true,
     host: '0.0.0.0',
     disableHostCheck: true,
+    port: 9101,
     contentBase: path.join(__dirname, './docs/dist')
   },
   plugins: [

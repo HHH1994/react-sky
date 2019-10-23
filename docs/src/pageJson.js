@@ -5,6 +5,7 @@ export default {
   ],
   '表单类': [
     'button',
-    'alert'
+    'alert',
+    'toast'
   ]
 }
